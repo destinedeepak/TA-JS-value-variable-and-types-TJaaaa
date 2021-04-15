@@ -11,14 +11,14 @@ Write a program that asks the user his/her age and check for the following condi
 👇
 */
 
-let age = prompt(`Enter your age`);
+let age = +prompt(`Enter your age`);
 if(age>=12 && age<=55)
   alert(`you can participate in the marathon`);
 else if(age>=4 && age<=11)
   alert(`You are too young to participate in the marathon`)
 else if(age<4)
   alert(`Hey Kiddo! Can You Walk ?`)  
-else if(age>55)
+else
   alert(`You are too old to participate in the marthon`)
 
 // Loops
@@ -47,6 +47,7 @@ Program to calculate the sum of first n natural numbers(1,2,3...n are known as n
 */
 let number = prompt("Enter a number to calculate sum of first n natural number");
 let sumOfNaturalNo =0;
+
 for(let i=0; i<=number;i++)
 sumOfNaturalNo += i;
 alert(sumOfNaturalNo);
