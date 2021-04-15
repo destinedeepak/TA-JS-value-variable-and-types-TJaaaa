@@ -7,8 +7,8 @@
   - `if` the number is odd print the message "number is odd"
 */
 
-let num=prompt("enter a number");
-if(num%2==0){
+let num = Number(prompt("enter a number"));
+if(num%2===0){
   console.log(`number is even`);
 }
 else{
@@ -26,7 +26,7 @@ if(numA>numB){
 }
 
 // 3. Convert the above code using`?` terniary operator
-alert(numA>numB ? numA :numB );
+numA>numB ? alert(numA):alert(numB );
 
 /*
 4. Write a program that asks the user for the house name and check the following conditions:
@@ -46,7 +46,8 @@ if(houseName==="stark"){
 
 
 // 5. Convert the above code using`?` terniary operator
-console.log(houseName === "stark" ? "winter is coming" : "all men must die");
+houseName === "stark" ? console.log("winter is coming") : 
+houseName==="lannister" ? alert("A Lannister always pays his debt"):alert ("All man must die");
 
 // Switch
 
@@ -55,41 +56,43 @@ console.log(houseName === "stark" ? "winter is coming" : "all men must die");
 let monthNumber = Number(prompt("Enter the month number"));
 switch(monthNumber){
   case 1:
-  alert("january");
+  alert("january, the no. of days are 31");
   break ;
   case 2:
-  alert("february");
+  alert("february, the no. of days are 28");
   break;
   case 3:
-  alert("march");
+  alert("march, the no. of days are 31");
   break;
   case 4:
-  alert("april");
+  alert("april, the no. of days are 30");
   break;
   case 5:
-  alert("may");
+  alert("may, the no. of days are 31");
   break;
   case 6:
-  alert("june");
+  alert("june, the no. of days are 30");
   break;
   case 7:
-  alert("july");
+  alert("july, the no. of days are 31");
   break;
   case 8:
-  alert("august");
+  alert("august, the no. of days are 31");
   break;
   case 9:
-  alert("september");
+  alert("september, the no. of days are 30");
   break;
   case 10:
-  alert("october");
+  alert("october, the no. of days are 31");
   break;
   case 11:
-  alert("november");
+  alert("november, the no. of days are 30");
   break;
   case 12:
-  alert("december");
+  alert("december, the no. of days are 31");
   break;
+  default:
+    alert("Not a valid input");
 }
 
 /* 7.
@@ -108,8 +111,10 @@ switch(true){
     alert(`In-hand amount ${salary - 20/100 * salary }`);
     break;
   case salary > 50000:
-    alert(`In-hand amount ${salary - 0/100 * salary }`);  
+    alert(`In-hand amount ${salary - 30/100 * salary }`);  
     break;
+    default:
+      alert("Not a valid input");
 }
 
 //  if..else vs switch
@@ -128,33 +133,33 @@ Implement the condition give below using`if..else` and`switch` statement.
 let marks = Number(prompt("Enter your marks"));
 if(marks>100){
   alert("Marks can't be greater than 100");
-}else if(marks >=80 && marks <= 100){
+}else if(marks > 80 && marks <= 100){
   alert("Grade A");
-}else if(marks>=50 && marks<=80){
+}else if(marks>50 && marks<=80){
   alert("Grade B");
-}else if(marks>=30 && marks<=50){
+}else if(marks>30 && marks<=50){
   alert("Grade C");
 }else if(marks>0){
   alert("Grade D");
 }
 
-// switch(true){
-//   case marks>100:
-//     alert("Marks can't be greater than 100");
-//     break;
-//   case(marks >=80 && marks <= 100):
-//   alert("Grade A");
-//   break;
-// case(marks>=50 && marks<=80):
-//   alert("Grade B");
-//   break;
-// case(marks>=30 && marks<=50):
-//   alert("Grade C");
-//   break;
-//   case(marks>0):
-//   alert("Grade D");
-//   break;
-// }
+switch(true){
+  case marks>100:
+    alert("Marks can't be greater than 100");
+    break;
+  case(marks >80 && marks <= 100):
+   alert("Grade A");
+   break;
+  case(marks>50 && marks<=80):
+   alert("Grade B");
+   break;
+  case(marks>30 && marks<=50):
+   alert("Grade C");
+   break;
+  case(marks>0):
+   alert("Grade D");
+   break;
+}
 
 
 
